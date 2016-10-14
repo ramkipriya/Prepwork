@@ -39,9 +39,9 @@ public class Time_Difference {
 		  		int b=ob.dayno(d2,m2,y2);
 		  		int dn=Math.abs(a-b);
 		  		long time=dn*24;
-		  		System.out.println("----------------------------------");
+		  		System.out.println("------------------------------------");
 		  		System.out.println("The Difference in 2 dates ="+dn+"days.");
-		  		System.out .println("-------------------------------");
+		  		System.out .println("------------------------------------");
 		  		System.out.println("The Difference in time ="+time+"hours");
 		  	}else
 		  		System.out.println("Invalid dates");
