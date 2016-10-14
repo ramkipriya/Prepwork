@@ -47,7 +47,7 @@ public class Time_Difference {
 		  		System.out.println("------------------------------------");
 		  		System.out.println("The Difference in 2 dates ="+dn+"days.");		  		
 		  		System.out .println("------------------------------------");
-		  		System.out.println("The Difference in months  ="+c+"days.");
+		  		System.out.println("The Difference in months  ="+c+"Months.");
 		  		System.out .println("------------------------------------");
 		  		System.out.println("The Difference in Year    ="+d+"Year.");
 		  		System.out .println("------------------------------------");
@@ -92,8 +92,11 @@ public class Time_Difference {
 			  dn=dn+365;}
 		  return dn;		  
 	  	  }
+	  
+	  
+	  
            int month(int month1,int month2,int year1,int year2)
-{        int  NoOfMonth=(year2-year1)*12;
+{           int  NoOfMonth=(year2-year1)*12;
              NoOfMonth=NoOfMonth+((12-(month1-1)+(month2-12)));
              return NoOfMonth;
 	}
