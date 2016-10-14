@@ -4,7 +4,7 @@ import java.io.*;
 public class Time_Difference {	
      static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
      int month[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
-     
+     private static int c;
 	  public static void main(String[] args)throws IOException{
 		  	Time_Difference ob=new Time_Difference();
 		  	System.out.print("Enter the 1st date in (dd/mm/yyyy) format: ");
@@ -37,12 +37,22 @@ public class Time_Difference {
 		  	{
 		  		int a=ob.dayno(d1,m1,y1);
 		  		int b=ob.dayno(d2,m2,y2);
+		  		//calculating number of days
 		  		int dn=Math.abs(a-b);
+		  		//calculating number of months
+		  		 c=ob.month(m1,m2,y1,y2);
+		  		 //calculating the year
+		  		 int d=y2-y1;
 		  		long time=dn*24;
 		  		System.out.println("------------------------------------");
-		  		System.out.println("The Difference in 2 dates ="+dn+"days.");
+		  		System.out.println("The Difference in 2 dates ="+dn+"days.");		  		
+		  		System.out .println("------------------------------------");
+		  		System.out.println("The Difference in months  ="+c+"days.");
+		  		System.out .println("------------------------------------");
+		  		System.out.println("The Difference in Year    ="+d+"Year.");
 		  		System.out .println("------------------------------------");
 		  		System.out.println("The Difference in time ="+time+"hours");
+		  		System.out .println("------------------------------------");
 		  	}else
 		  		System.out.println("Invalid dates");
 		  		
@@ -82,5 +92,9 @@ public class Time_Difference {
 			  dn=dn+365;}
 		  return dn;		  
 	  	  }
+           int month(int month1,int month2,int year1,int year2)
+{        int  NoOfMonth=(year2-year1)*12;
+             NoOfMonth=NoOfMonth+((12-(month1-1)+(month2-12)));
+             return NoOfMonth;
 	}
-
+}
