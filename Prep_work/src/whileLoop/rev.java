@@ -1,5 +1,5 @@
 package whileLoop;
-
+//Program to reverse of a number
 import java.util.Scanner;
 
 public class rev {
@@ -10,6 +10,9 @@ public class rev {
 		
 		int n=num.nextInt();
 		int result=reverse(n);
+		System.out.println();
+		System.out.println("output");
+		System.out.println("------");
 		System.out.println("The reverse of the number");
 		System.out.println( result);
 	}
